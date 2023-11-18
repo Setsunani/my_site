@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+
+:root {
+  --primary-color: green;
+  --secondary-color: rgb(4, 92, 9);
+  --accent1-color: #FFA500;
+  --accent2-color: red;
+
+  --heading-font: "Roboto Mono";
+  --font-family: 'Indie Flower', cursive;
+
+  --headline-color-on-white: green;
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: green;
+  --paragraph-color-on-color: white;
+  --nav-link-color: green;
+  --nav-background-color: #FFA500;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: red;
+  --paragraph-background-color: #0A192F;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1, h2, h4, h5, h6, p, footer {
+  font-family: 'Roboto Mono', monospace;
+  color: #333; /* Tom de cinza mais escuro */
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  color: green;
+  max-width: 100%;
+}
+
+.minha-logo {
+  display: grid;
+  place-items: center;
+  height: 500px;
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: #FFA500;
+}
+
+header {
+  padding: 1em;
+  text-align: center;
+  color: rgb(83, 7, 7);
+  background-color: var(--paragraph-background-color);
+  font-family: 'Roboto Mono', monospace;
+}
+
+header > h1, header > h2 {
+  color: rgb(117, 5, 5);
+}
+
+p {
+  color: blue;
+  padding: 1em;
+}
+
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.colors th {
+  background-color: pink;
+}
+
+.colors td {
+  width: 25%;
+  height: 3em;
+  background-color: orange;
+}
+
+.primary {
+  background-color: purple;
+}
+
+.secondary {
+  background-color: rgb(1, 70, 18);
+}
+
+.accent1 {
+  background-color: lavender;
+}
+
+.accent2 {
+  background-color: rgb(70, 104, 2);
+}
+
+p.colored {
+  background-color: lightcoral;
+  color: indigo;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+  list-style-type: none;
+  display: flex;
+}
+
+nav a {
+  min-width: 120px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:link, nav a:visited {
+  color: olive;
+}
+
+nav a:hover {
+  color: crimson;
+  background-color: cornflowerblue;
+}
+
+.sitemap {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+
+.sitemap > div {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.sm-home {
+  grid-area: home;
+  background-color: #4CAF50;
+  line-height: 3em;
+}
+
+.sm-page2 {
+  grid-area: page2;
+  background-color: #4CAF50;
+  line-height: 3em;
+}
+
+.sm-page3 {
+  grid-area: page3;
+  background-color: #4CAF50;
+  line-height: 3em;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid #4CAF50;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid #4CAF50;
+  border-left: 1px solid #4CAF50;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid #4CAF50;
+  border-right: 1px solid #4CAF50;
+}
+
+.sm-page2, .top, .left, .right {
+  font-size: 16px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+footer a, footer a:hover {
+  color: white;
+}
+
+footer a:hover {
+  color: #228B22;
+}
+
+.footer-text {
+  color: white;
+}

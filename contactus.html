@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles-contactus.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="site-plan.html">Home</a>
+            <a href="biomes.html">Biomes of the World</a>
+            <a href="fascinating-species.html">Fascinating Species</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="feedback"></div>
+
+        <form>
+            <label for="user_name">Name:</label>
+            <input type="text" id="user_name" name="user_name" required>    
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>2023 Contact us personal website - All rights reserved.</p>
+    </footer>
+
+    <script>
+        const feedbackElement = document.getElementById('feedback');
+        const formElement = document.forms[0];
+        formElement.addEventListener('submit', function(e) {
+            e.preventDefault();
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            feedbackElement.style.display = "block";
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+</body>
+</html>
